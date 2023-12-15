@@ -10,7 +10,7 @@ export default function Home() {
       <Head>
         <title>Embedlify</title>
       </Head>
-      <div className='text-center'>
+      <div className='text-center align-center'>
         <h1>Embedlify</h1>
         <h2>Visit <a href="/api/og">/api/og</a> to generate your images! See the <a href="https://github.com/kach0w/embedlify">GitHub</a> for more details.</h2>
       </div>
