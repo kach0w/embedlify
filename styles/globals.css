@@ -28,3 +28,11 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 32px;
+}
