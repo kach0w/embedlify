@@ -55,7 +55,7 @@ export default async function handler(request, res) {
   return new ImageResponse(
     (
       <div tw='flex w-[250px] h-[50px] rounded-lg'>
-        <div tw="flex w-[248px] h-[48px] shadow-[0_1px_4px_rgba(0,0,0,0.30)] items-center justify-center bg-white rounded-lg">
+        <div tw="flex w-[248px] h-[48px] shadow items-center justify-center bg-[#F3F3F3] rounded-lg">
           <div tw="flex inset-y-0 absolute left-0 w-[18px] h-[50px] bg-[#C02C38] rounded-l-lg">
           </div>
           <div tw="flex text-[40px] p-2">
