@@ -54,16 +54,19 @@ export default async function handler(request, res) {
 
   return new ImageResponse(
     (
-    <div tw="flex w-[250px] h-[50px] items-center justify-center bg-white shadow rounded-lg">
-      <div tw="flex inset-y-0 absolute left-0 w-[9px] h-[50px] bg-[#C02C38] rounded-l-lg">
+      <div tw='flex bg-black rounded-lg'>
+        <div tw="flex w-[246px] h-[46px] items-center justify-center bg-white rounded-lg">
+          <div tw="flex inset-y-0 absolute left-0 w-[13px] h-[50px] bg-[#C02C38] rounded-l-lg">
+          </div>
+          <div tw="flex text-[40px] p-2">
+            {img}
+          </div>
+          <div tw="flex font-bold">
+            <a tw="flex">{msg}</a>
+          </div>
+        </div>
       </div>
-      <div tw="flex text-[40px] p-2">
-        {img}
-      </div>
-      <div tw="flex font-bold">
-        <a tw="flex">{msg}</a>
-      </div>
-    </div>
+    
     ), {
     width: 250,
     height: 50,
