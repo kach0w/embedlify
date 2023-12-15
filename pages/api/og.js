@@ -8,7 +8,6 @@ export default async function handler(request, res) {
   const today = new Date();
   const date = today.getDate()
   const month = today.getMonth() + 1;
-  console.log(date)
   let holiday = searchParams.get('holiday');
   let img, msg
   if (!holiday) {
@@ -51,7 +50,7 @@ export default async function handler(request, res) {
   }
 
   return new ImageResponse(
-    <div tw="flex w-[250px] h-[50px] items-center justify-center bg-white border-black rounded-lg" style="border-left: 2px solid #cf5353;">
+    <div tw="flex w-[250px] h-[50px] items-center justify-center bg-white rounded-lg">
       <div tw="flex inset-y-0 absolute left-0 w-[9px] h-[50px] bg-[#C02C38] rounded-l-lg">
       </div>
       <div tw="flex text-[40px] p-2">
@@ -61,5 +60,8 @@ export default async function handler(request, res) {
         <a tw="flex">{msg}</a>
       </div>
     </div>
-  );
+  ), {
+    width: 250,
+    height: 50,
+  },
 }
