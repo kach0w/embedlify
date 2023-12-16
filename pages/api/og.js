@@ -29,7 +29,7 @@ export default async function handler(request, res) {
   if(holiday.toLowerCase() === "christmas"){
     img = "🎄"
     msg = "Merry Christmas!"
-  } else if(holiday.toLowerCase() === "Happy Holidays!"){
+  } else if(holiday === "Happy Holidays!"){
     img = "🎄"
     msg = "Happy Holidays!"
   } else if(holiday.toLowerCase() === "thanksgiving"){
