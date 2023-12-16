@@ -12,7 +12,7 @@ export default async function handler(request, res) {
   let img, msg
   if (!holiday) {
     if(date == 25 && month == 12){holiday = "christmas"}
-    else if((date < 25 && month == 12) || (date >= 1 && month == 12)){holiday = "Happy Holidays!"}
+    else if((date < 25 && month == 12) && (date >= 1 && month == 12)){holiday = "Happy Holidays!"}
     else if(date == 28 && month == 11){holiday = "thanksgiving"}
     else if(date == 1 && month == 1){holiday = "new_years"}
     else if(date == 27 && month == 5){holiday = "memorial"}
