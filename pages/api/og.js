@@ -9,6 +9,7 @@ export default async function handler(request, res) {
   const date = today.getDate()
   const month = today.getMonth() + 1;
   let holiday = searchParams.get('holiday');
+  let color = searchParams.get('color');
   let img, msg
   if (!holiday) {
     if(date == 25 && month == 12){holiday = "christmas"}
@@ -24,8 +25,7 @@ export default async function handler(request, res) {
       width: 1,
       height: 1,
     });}
-  }
-  
+  } 
   if(holiday.toLowerCase() === "christmas"){
     img = "🎄"
     msg = "Merry Christmas!"
@@ -37,8 +37,7 @@ export default async function handler(request, res) {
     msg = "Happy Thanksgiving!"
   } else if(holiday.toLowerCase() === "new_years"){
     img = "🍾"
-    msg = "Happy New Year!!"
-  }
+    msg = "Happy New Year!!"}
   else if(holiday.toLowerCase() === "memorial"){
     img = "🎖️"
     msg = "Happy Memorial Day!"
@@ -55,12 +54,14 @@ export default async function handler(request, res) {
     img = "💘"
     msg = "Happy Valentines Day!"
   }
-
+  const colorStyle = {
+    backgroundColor: `#${color}`
+  }
   return new ImageResponse(
     (
       <div tw='flex w-[250px] h-[50px] rounded-lg'>
         <div tw="flex w-[248px] h-[48px] shadow items-center justify-center bg-[#F3F3F3] rounded-lg">
-          <div tw="flex inset-y-0 absolute left-0 w-[18px] h-[50px] bg-[#C02C38] rounded-l-lg">
+          <div style={colorStyle} tw="flex inset-y-0 absolute left-0 w-[18px] h-[50px] rounded-l-lg">
           </div>
           <div tw="flex text-[40px] p-2">
             {img}
