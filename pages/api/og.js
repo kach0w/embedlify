@@ -16,8 +16,6 @@ export default async function handler(request, res) {
   let color = searchParams.get('color');
   let img, msg
   if (!holiday) {
-    console.log("date" + date);
-    console.log("month" + month)
     if(date == 25 && month == 12){holiday = "christmas"}
     else if(date < 25 && month == 12 && date >= 1){holiday = "Happy Holidays!"}
     else if(date == 28 && month == 11){holiday = "thanksgiving"}
@@ -27,7 +25,7 @@ export default async function handler(request, res) {
     else if(date == 2 && month == 9){holiday = "labor"}
     else if(date == 31 && month == 10){holiday = "halloween"}
     else if(date == 14 && month == 2){holiday = "valentines"}
-    else{ return new ImageResponse(<div tw="flex">{date}</div>, {
+    else{ return new ImageResponse(<div tw="flex">{date}/0{month}</div>, {
       width: 100,
       height: 100,
     });}
