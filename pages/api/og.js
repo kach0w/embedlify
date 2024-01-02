@@ -7,8 +7,9 @@ export default async function handler(request, res) {
   const { searchParams } = request.nextUrl;
   let today = new Date();
   const options = { timeZone: 'America/Los_Angeles' };
-  today = new Date(today);
   today = today.toLocaleString('en-US', options);
+  today = new Date(today);
+
   const date = today.getDate()
   const month = today.getMonth() + 1;
   let holiday = searchParams.get('holiday');
