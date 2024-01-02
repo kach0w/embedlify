@@ -23,9 +23,9 @@ export default async function handler(request, res) {
     else if(date == 2 && month == 9){holiday = "labor"}
     else if(date == 31 && month == 10){holiday = "halloween"}
     else if(date == 14 && month == 2){holiday = "valentines"}
-    else{ return new ImageResponse(<div style="display:none"></div>, {
-      width: 1,
-      height: 1,
+    else{ return new ImageResponse(<div style="">asdf</div>, {
+      width: 5,
+      height: 5,
     });}
   } 
   if(holiday.toLowerCase() === "christmas"){
