@@ -23,7 +23,7 @@ export default async function handler(request, res) {
     else if(date == 2 && month == 9){holiday = "labor"}
     else if(date == 31 && month == 10){holiday = "halloween"}
     else if(date == 14 && month == 2){holiday = "valentines"}
-    else{ return new ImageResponse(<div style="display:flex">{date}</div>, {
+    else{ return new ImageResponse(<div tw="flex">{date}</div>, {
       width: 100,
       height: 100,
     });}
