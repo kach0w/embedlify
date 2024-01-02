@@ -17,13 +17,13 @@ export default async function handler(request, res) {
     if(date == 25 && month == 12){holiday = "christmas"}
     else if(date < 25 && month == 12 && date >= 1){holiday = "Happy Holidays!"}
     else if(date == 28 && month == 11){holiday = "thanksgiving"}
-    else if(date == 1 && month == 1){holiday = "new_years"}
+    else if(date == 12 && month == 1){holiday = "new_years"}
     else if(date == 27 && month == 5){holiday = "memorial"}
     else if(date == 4 && month == 7){holiday = "independence"}
     else if(date == 2 && month == 9){holiday = "labor"}
     else if(date == 31 && month == 10){holiday = "halloween"}
     else if(date == 14 && month == 2){holiday = "valentines"}
-    else{ return new ImageResponse(<div style="">{date}</div>, {
+    else{ return new ImageResponse(<div style="display:flex">{date}</div>, {
       width: 100,
       height: 100,
     });}
