@@ -1,3 +1,9 @@
+> <picture>
+>   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/light-theme/warning.svg">
+>   <img alt="Warning" src="https://raw.githubusercontent.com/Mqxx/GitHub-Markdown/main/blockquotes/badge/dark-theme/warning.svg">
+> </picture><br>
+>
+> Only a few major holidays are supported
 
 # <a href="https://embedlify.vercel.app/">embedlify</a>
 Generate holiday-themed images for your website
